@@ -176,27 +176,4 @@ Add this to each of the calculating functions
     history.push(calculation);
 ```
 
-## Local Storage
-
-update the value of the `history` variable
-
-```javascript
-  let history = JSON.parse(localStorage.getItem('calculationHistory')) || [];
-```
-
-Explaination
-- Checks for previously stored history in localStorage.
-- If none exists, it initializes history as an empty array.
-
-add this statement after each `history.push` statement
-
-```javascript
-  localStorage.setItem('calculationHistory', JSON.stringify(history));
-```
-
-Explaination
-- After pushing a new calculation to the history array, it’s saved back to localStorage
-- The JSON.stringify() method converts the array into a string format suitable for storage.
-
-
 
